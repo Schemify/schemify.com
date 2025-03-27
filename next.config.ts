@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
+const envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true;
 
 const nextConfig: NextConfig = {
-  basePath: isProd ? "/schemify.com" : "",
-  assetPrefix: isProd ? "/schemify.com/" : "",
+  output: process.env.NODE_ENV !== "production" ? undefined : "export",
   images: {
-    loader: "custom",
-    path: isProd ? "/schemify.com/" : "/",
+    unoptimized: envImageUnoptimize,
   },
 };
 
