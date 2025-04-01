@@ -1,12 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: 'export',
   images: {
-    loader: "akamai",
-    path: "",
+    loader: 'akamai',
+    path: ''
   },
-  assetPrefix: "./",
-};
+  assetPrefix: './'
+}
 
-export default nextConfig;
+export default nextConfig
